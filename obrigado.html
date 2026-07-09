@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Aprovada | Império Dark</title>
+    
+    <meta name="robots" content="noindex, nofollow"> <!-- Não queremos que a página de obrigado apareça no Google -->
+
+    <!-- Preconnect for Webfonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/16x16.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/32x32.svg">
+    <link rel="icon" type="image/svg+xml" sizes="48x48" href="/48x48.svg">
+    <link rel="icon" type="image/svg+xml" sizes="64x64" href="/64x64.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-color': '#0d0e12',
+                        'text-color': '#e2e8f0',
+                        'primary-red': '#ff003c',
+                        'neon-cyan': '#00f0ff',
+                        'card-bg': '#161922',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-bg-color text-text-color font-sans leading-relaxed min-h-screen flex flex-col" style="background: radial-gradient(circle at center top, #1f1418 0%, #0d0e12 60%);">
+
+    <!-- Conteúdo Principal -->
+    <main role="main" class="flex-grow flex items-center justify-center py-20 px-5">
+        <div class="max-w-2xl w-full bg-card-bg border border-primary-red/30 rounded-2xl p-8 md:p-12 text-center shadow-[0_0_50px_rgba(255,0,60,0.1)] reveal transform translate-y-10 opacity-0 transition-all duration-700 ease-out" id="thankyou-card">
+            
+            <!-- Ícone de Sucesso -->
+            <div class="w-24 h-24 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(34,197,94,0.2)]">
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            
+            <h1 class="font-heading text-3xl md:text-5xl font-black text-white mb-4 uppercase">COMPRA APROVADA!</h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-10">
+                Parabéns pela decisão! O seu acesso ao <strong class="text-neon-cyan">Império Dark</strong> já foi enviado para o seu e-mail cadastrado na hora da compra.
+            </p>
+            
+            <div class="bg-bg-color rounded-xl p-6 mb-8 border border-gray-800 text-left">
+                <h3 class="text-white font-heading font-bold mb-4 flex items-center text-lg">
+                    <svg class="w-6 h-6 mr-2 text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Próximos Passos:
+                </h3>
+                <ol class="space-y-4 text-slate-400">
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-red/20 text-primary-red flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
+                        <span>Abra o aplicativo do seu e-mail (verifique também as caixas de <strong>Spam/Lixo Eletrônico</strong> ou <strong>Promoções</strong>).</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-red/20 text-primary-red flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
+                        <span>Procure pelo e-mail enviado pela plataforma <strong>Kiwify</strong> informando a aprovação do pagamento e o acesso.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-red/20 text-primary-red flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</span>
+                        <span>Clique no link dentro do e-mail para acessar a plataforma, criar sua senha (se for o primeiro acesso) e baixar todo o material.</span>
+                    </li>
+                </ol>
+            </div>
+            
+            <a href="mailto:suporte@imperiodark.com.br" class="text-sm text-slate-500 hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">
+                Não recebeu o e-mail? Fale com o suporte: suporte@imperiodark.com.br
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="py-8 text-center text-slate-500 text-sm border-t border-gray-800/50">
+        <p>&copy; 2026 Império Dark. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Animação simples de entrada ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const card = document.getElementById('thankyou-card');
+                if (card) {
+                    card.classList.remove('opacity-0', 'translate-y-10');
+                }
+                
+                // Disparo de pixel de conversão para rastreamento (Exemplo)
+                console.log('[Tracking Pixel] Conversão Concluída: Purchase event disparado com sucesso.');
+                // fbq('track', 'Purchase', {value: 97.00, currency: 'BRL'});
+            }, 100);
+        });
+    </script>
+</body>
+</html>
